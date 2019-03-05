@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html >
+	<head>
+		<meta charset="UTF-8">
+		<title>Monolith</title>
+
+		<link rel="stylesheet" href="css/style.css"> 
+		<link href="https://fonts.googleapis.com/css?family=Barlow:400,700" rel="stylesheet">
+
+	</head>
+
+	<body onload="onload()">
+
+		<div id="panelVisibleBeforeOnLoad" class="black" >
+			<div class="loader">Loading...</div>
+		</div>
+
+		<div class="htmlContainer" id="htmlContainer">
+			<div class="countDownContainer fade" id="countDownContainer">
+			</div>
+
+			<div class="gameOverContainer fade" id="gameOverContainer">				
+				<div class="margin40">
+					<span class="bold gameOver">GAME OVER</span>
+				</div>
+
+				<div class="margin40">
+					<span >SCORE: </span> <span id="scoreContainer" class="bold"></span>
+				</div>
+
+				<div class="margin40">
+					<div id="startButton" class="flexColumn start" onclick="startGame()">				
+						<span class="margin8">RESTART</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="instructions fade" id="instructionsContainer">				
+				<div class="margin40">
+					<span class="bold">SHOOT THE SPHERES TO MAKE POINTS</span>
+				</div>
+				
+				<div id="wasdContainer" class="margin40">
+					<div class="flexColumn">
+						<svg style="width:48px; height:48px" viewBox="0 0 24 24">
+							<path fill="#FFF" d="M19,10H17V8H19M19,13H17V11H19M16,10H14V8H16M16,13H14V11H16M16,17H8V15H16M7,10H5V8H7M7,13H5V11H7M8,11H10V13H8M8,8H10V10H8M11,11H13V13H11M11,8H13V10H11M20,5H4C2.89,5 2,5.89 2,7V17A2,2 0 0,0 4,19H20A2,2 0 0,0 22,17V7C22,5.89 21.1,5 20,5Z" />
+						</svg>
+						<div class="margin8">
+							<span><span class="bold">WASD</span> to move</span>
+						</div>
+					</div>
+				</div>
+				
+				<div class="margin40 mouseInstructions">
+					
+					<div id="mouseInstructionsContainer" class="flexColumn">
+						<svg style="width:48px; height:48px" viewBox="0 0 24 24">
+							<path fill="#FFF" d="M11,1.07C7.05,1.56 4,4.92 4,9H11M4,15A8,8 0 0,0 12,23A8,8 0 0,0 20,15V11H4M13,1.07V9H20C20,4.92 16.94,1.56 13,1.07Z" />
+						</svg>
+						<div class="margin8">
+							<span><span class="bold">left click</span> to shoot<br/><span class="bold">right click</span> to change elevation</span>
+						</div>
+					</div>
+
+					<div class="margin40 bold">or</div>
+					
+					<div id="keyboardInstructionsContainer" class="flexColumn">
+						<svg style="width:48px; height:48px" viewBox="0 0 24 24">
+							<path fill="#FFF" d="M19,10H17V8H19M19,13H17V11H19M16,10H14V8H16M16,13H14V11H16M16,17H8V15H16M7,10H5V8H7M7,13H5V11H7M8,11H10V13H8M8,8H10V10H8M11,11H13V13H11M11,8H13V10H11M20,5H4C2.89,5 2,5.89 2,7V17A2,2 0 0,0 4,19H20A2,2 0 0,0 22,17V7C22,5.89 21.1,5 20,5Z" />
+						</svg>
+						<div class="margin8">
+							<span><span class="bold">m</span> to shoot<br/><span class="bold">space</span> to change elevation</span>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="margin40">
+					<div id="startButton" class="flexColumn start" onclick="startGame()">				
+						<span class="margin8">START</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="disablingDiv" id="disablingDiv" />
+		</div>
+
+		<canvas id="canvas"></canvas>
+		
+		<script src='../common/libs/three.min.js'></script>
+		<script src='../common/libs/Tween.js'></script>
+		<script src='js/libs/tinycolor.js'></script>
+
+		<script src="js/utils.js"></script>
+		
+		<script src='js/libs/postprocessing/FilmShader.js'></script>
+		<script src='js/libs/postprocessing/CopyShader.js'></script>
+		<script src='js/libs/postprocessing/RGBShiftShader.js'></script>
+		<script src='js/libs/postprocessing/StaticShader.js'></script>
+		<script src='js/libs/postprocessing/VignetteShader.js'></script>
+		<script src='js/libs/postprocessing/DigitalGlitch.js'></script>
+
+		<script src='js/libs/postprocessing/EffectComposer.js'></script>
+		<script src='js/libs/postprocessing/GlitchPass.js'></script>
+		<script src='js/libs/postprocessing/ShaderPass.js'></script>
+		<script src='js/libs/postprocessing/RenderPass.js'></script>
+		<script src='js/libs/postprocessing/FilmPass.js'></script>
+
+		<script src='js/terrain/PRNG.js'></script>
+		<script src='js/terrain/SimplexNoise.js'></script>
+		<script src='js/terrain/Noise.js'></script>
+		<script src='js/terrain/FalloffGenerator.js'></script>
+		<script src='js/terrain/MapGenerator.js'></script>
+		<script src="js/terrain/TerrainMeshGenerator.js"></script>
+
+		<script src="js/eventBus/constants.js"></script>
+		<script src="js/eventBus/EventBus.js"></script>
+
+		<script src="js/ui/CanvasTexture.js"></script>    
+		<script src="js/ui/GUIManager.js"></script>    
+
+		<script src="js/sceneSubjects/gameEntities/movement/TargetSpawnerMovement.js"></script>		
+
+		<script src="js/sceneSubjects/gameEntities/unutilezedEntities/BoostSpawner.js"></script>		
+		<script src="js/sceneSubjects/gameEntities/unutilezedEntities/LaserShooter.js"></script>		
+		<script src="js/sceneSubjects/gameEntities/TurretBulletsShooter.js"></script>	
+		<script src="js/sceneSubjects/gameEntities/Turrets.js"></script>		
+		<script src="js/sceneSubjects/gameEntities/TargetsSpawner.js"></script>		
+		<script src="js/sceneSubjects/gameEntities/Target.js"></script>				
+		<script src="js/sceneSubjects/gameEntities/PlayerBulletsShooter.js"></script>		
+		<script src="js/sceneSubjects/gameEntities/Player.js"></script>		
+		<script src="js/sceneSubjects/gameEntities/GameEntitiesManager.js"></script>		
+
+		<script src="js/sceneSubjects/Particles.js"></script>
+		<script src="js/sceneSubjects/Monolith.js"></script>
+		<script src="js/sceneSubjects/Lights.js"></script>
+		<script src="js/sceneSubjects/Floor.js"></script>
+		
+		<script src="js/gameState/GameStateManager.js"></script>
+
+		<script src="js/PlayerAndCameraPositionManager.js"></script>
+
+		<script src="js/controls/Accelerator.js"></script>
+		<script src="js/controls/PolarControls.js"></script>
+		<script src="js/controls/MouseControls.js"></script>
+		
+		<script src="js/SceneManager.js"></script>    
+		<script src="js/DomUIManager.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
