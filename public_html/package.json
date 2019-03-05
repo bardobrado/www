@@ -3,7 +3,9 @@
     "version": "0.0.1",
     "description": "My first socket.io app",
     "dependencies": {
+        "dat.gui": "^0.7.5",
         "express": "^4.16.4",
-        "socket.io": "^2.2.0"
+        "socket.io": "^2.2.0",
+        "three.meshline": "^1.2.0"
     }
 }
