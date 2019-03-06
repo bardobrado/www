@@ -31,7 +31,7 @@ function init() {
 
 
     this.scene = new THREE.Scene();
-    this.scene.background = new THREE.Color(0x000000);
+    this.scene.background = new THREE.Color(0xbbbbbb);
     this.scene.fog = new THREE.Fog(0x000000, 200, 500);
 
 
@@ -267,6 +267,19 @@ function onWindowResize() {
         instance.composer.setSize(instance.dom.clientWidth, instance.dom.clientHeight);
 }
 
+
+
+
+function onDocumentTouchEnd(event) {
+    event.preventDefault();
+
+    mouse.x = (event.changedTouches[0].clientX / window.innerWidth) * 2 - 1;
+    mouse.y = -(event.changedTouches[0].clientY / window.innerHeight) * 2 + 1;
+
+    raycaster.setFromCamera(mouse, camera);
+    const intersects = raycaster.intersectObjects(yourObject3D);
+}
+
 function onDocumentMouseDown(event) {
 
 
@@ -274,10 +287,12 @@ function onDocumentMouseDown(event) {
     var mouse = new THREE.Vector2(); // create once
 
 
-
+//    mouse.x = ( event.touches[0].pageX / renderer.domElement.clientWidth) * 2 - 1;
+//     mouse.y = -( event.touches[0].pageY / renderer.domElement.clientHeight) * 2 + 1;
     mouse.x = (event.clientX / renderer.domElement.clientWidth) * 2 - 1;
     mouse.y = -(event.clientY / renderer.domElement.clientHeight) * 2 + 1;
 
+   
     raycaster.setFromCamera(mouse, camera);
 
     var intersects = raycaster.intersectObjects([sphere, sphere1]);
@@ -327,6 +342,7 @@ function animate() {
 
     window.addEventListener('resize', onWindowResize, false);
     document.addEventListener('mousedown', onDocumentMouseDown, false);
+    document.addEventListener('touchend', onDocumentTouchEnd, false);
     //rotationY.rotationY = this.camera.rotation.y;
 
     if (togglecameraview) {
