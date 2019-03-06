@@ -1,0 +1,85 @@
+<html>
+
+<head>
+<style>.button {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+      }</style>
+
+</head>
+
+<body>
+    <script src="libs/three.min.js"></script>
+    <script src="libs/inflate.min.js"></script>
+    <script src="libs/FBXLoader.js"></script>
+    <script src="libs/OrbitControls.js"></script>
+    <script src="libs/Detector.js"></script>
+
+
+    <script src="https://threejs.org/build/three.min.js"></script>
+    <script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://threejs.org/examples/js/renderers/CSS3DRenderer.js"></script>
+   
+
+    <script>
+        var string = '<div>' +
+            '<h1>This is an H1 Element.</h1>' +
+            '<span class="large">Hello Essential Three.js</span>' +
+            '  <button type="button">Click Me!</button> ' +
+
+            '<textarea> And this is a textarea</textarea>' +
+            '</div>';
+        
+            init();
+
+        function init() {
+            scene = new THREE.Scene();
+            camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
+
+            renderer = new THREE.CSS3DRenderer();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.domElement.style.position = 'absolute';
+            renderer.domElement.style.top = 0;
+           
+           
+            camera.position.x = 500;
+            camera.position.y = 500;
+            camera.position.z = 500;
+            camera.lookAt(scene.position);
+            // create an example object and add to scene
+            var cssElement = createCSS3DObject(string);
+            cssElement.position.set(0, 0, 0);
+            scene.add(cssElement);
+            // add the output of the renderer to the html element
+            document.body.appendChild(renderer.domElement);
+            render();
+        }
+
+        function createCSS3DObject(s) {
+            // create outerdiv and set inner HTML from supplied string
+            var div = document.createElement('div');
+            div.innerHTML = s;
+            // set some values on the div to style it, standard CSS
+            div.style.width = '370px';
+            div.style.height = '370px';
+            div.style.opacity = 0.7;
+            div.style.background =
+                new THREE.Color(Math.random() * 0xffffff).getStyle();
+            // create a CSS3Dobject and return it.
+            var object = new THREE.CSS3DObject(div);
+            return object;
+        }
+
+        function render() {
+            renderer.render(scene, camera);
+        }
+    </script>
+</body>
+
+</html>

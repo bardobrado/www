@@ -7,26 +7,17 @@ this.controls;
 this.camera;
 this.scene;
 this.renderer;
-this.renderer2;
-this.scene2;
 
-var stats, w, h, sphere, sphere1, togglecameraview, isMeshName, intersect, element;
+var stats, w, h, sphere, sphere1, togglecameraview, isMeshName, intersect;
 
 //const gui = new dat.GUI();
 
 this.container = document.createElement('div');
 this.container.style.height = '100%';
-this.container.style.width = '100%';
 document.body.appendChild(this.container);
 
 this.clock = new THREE.Clock();
-var string = '<div>' +
-'<h1>This is an H1 Element.</h1>' +
-'<span class="large">Hello Essential Three.js</span>' +
-'  <button type="button">Click Me!</button> ' +
 
-'<textarea> And this is a textarea</textarea>' +
-'</div>';
 
 init();
 animate();
@@ -54,36 +45,6 @@ function init() {
     this.renderer.setPixelRatio(window.devicePixelRatio);
     this.renderer.setSize(window.innerWidth, window.innerHeight);
     this.renderer.shadowMap.enabled = true;
-
-    this.scene2 = new THREE.Scene();
-     //HTML
-     element = document.createElement('div');
-     //element.innerHTML = string;
-     element.className = 'animated bounceInDown' ; 
-     element.style.background = "#0094ff";
-     element.style.fontSize = "2em";
-     element.style.color = "white";
-     element.style.padding = "2em";
-
-     //CSS Object
-     div = createCSS3DObject(string);
-     div.position.x = -200;
-     div.position.y = 130;
-     div.position.z = 0;
-     div.rotation.y = Math.PI/2;
-     scene2.add(div);
-
-     //CSS3D Renderer
-     renderer2 = new THREE.CSS3DRenderer();
-     renderer2.setSize(window.innerWidth, window.innerHeight);
-     renderer2.domElement.style.position = 'absolute';
-     renderer2.domElement.style.top = 0;
-     
-     //document.body.appendChild(renderer2.domElement);
-     this.container.appendChild(this.renderer.domElement);
-     this.container.appendChild(this.renderer2.domElement);
-    
-
 
     this.camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
     this.camera.position.set(0, 108, 190);
@@ -136,7 +97,9 @@ function init() {
     meshlinematerial.transparent = true;
     var valor = Math.max.apply(null, grid );
     for (var i = 0, j = 0, k = -halfSize; i <= Math.max.apply(null, grid) ; i++, k += step) {
-  
+        // vertices.push(-halfSize, 0, k, halfSize, 0, k);
+        // vertices.push(k, 0, -halfSize, k, 0, halfSize);
+        //if (j > 4) {
             
             var v = new THREE.Vector3(( 210- halfSize - 1), 0.5, k * scale);
             var v0 = new THREE.Vector3((58 + halfSize + 1), 0.5, k * scale);
@@ -178,7 +141,9 @@ function init() {
                     mesh.position.z = (halfSize - step / 2) * scale + m * (-step) * scale;
 
                     mesh.receiveShadow = true;
-                  
+                    //mesh.material.color = new THREE.Color(Math.random()* 1/255, Math.random()* 1/255, Math.random()* 1/255);
+
+                    //mesh.geometry.colorsNeedUpdate = true;
 
                     scene.add(mesh);
                     j++;
@@ -187,7 +152,15 @@ function init() {
         }
     }
 
- 
+    // var geometry = new THREE.BufferGeometry();
+    // geometry.addAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
+    // geometry.addAttribute('color', new THREE.Float32BufferAttribute({
+    //     color: 0x993399
+    // }, 3));
+
+    // var LineSegments = new THREE.LineSegments(geometry, meshlinematerial);
+    // LineSegments.scale.set(1, 1, 1.77);
+    // scene.add(LineSegments);
 
     var geometry1 = new THREE.SphereGeometry(1, 1, 1);
     sphere1 = new THREE.Mesh(geometry1, materialcylinder);
@@ -221,43 +194,76 @@ function init() {
     var outsideUniforms = glowMesh.outsideMesh.material.uniforms;
     outsideUniforms.glowColor.value.set(0xf0f0f0);
 
+    //var axes = new THREE.AxisHelper(250);
+    //this.scene.add(axes);
 
-    
+    this.container.appendChild(this.renderer.domElement);
 
     this.controls = new THREE.OrbitControls(this.camera, this.renderer.domElement);
     this.controls.target.set(0, 150, 0);
     //this.controls.minPolarAngle = Math.PI / 2;
     this.controls.maxPolarAngle = Math.PI / 2 - 0.22;
     this.controls.minAzimuthAngle = Math.PI / 2;
-    //this.controls.maxAzimuthAngle = Math.PI / 2;
+    this.controls.maxAzimuthAngle = Math.PI / 2;
     //this.controls.mouseButtons.ORBIT = 0;
-    //this.controls.mouseButtons.PAN = 0;
+    this.controls.mouseButtons.PAN = 0;
     // if (this.controls.maxPolarAngle == Math.PI / 2) {
     //this.controls.enableZoom = false;
-    this.controls.enabled = false;
     this.controls.update();
 
-  
-    
+
+
+    // stats = new Stats();
+    // this.container.appendChild(stats.dom);
+
+
+
+    // var obj = {
+    //     cameraX: camera.position.x,
+    //     cameraY: camera.position.y,
+    //     cameraZ: camera.position.z,
+    //     cameraRotY: camera.rotation.z,
+
+    // }
+    // gui.remember(obj);
+
+    // //gui.add(controller, 'selected_cube').listen();
+    // var sphereX = gui.add(obj, 'cameraX').min(0).max(200).step(0.25);
+    // var sphereY = gui.add(obj, 'cameraY').min(0).max(200).step(0.25);
+    // var sphereZ = gui.add(obj, 'cameraZ').min(0).max(200).step(0.25);
+    // var camerarotY = gui.add(obj, 'cameraRotY').min(0).max(1).step(0.0001);
+
+
+    // sphereX.onChange(function (value) {
+    //     camera.position.x = value;
+    //     updateGui();
+    // });
+    // sphereY.onChange(function (value) {
+    //     camera.position.y = value;
+    //     updateGui();
+    // });
+    // sphereZ.onChange(function (value) {
+    //     camera.position.z = value;
+    //     updateGui();
+    // });
+    // camerarotY.onChange(function (value) {
+    //     camera.rotation.y = value;
+    //     updateGui();
+    // });
+
+
+    // //gui.add(rotationY, 'rotationY').listen();
+
+    // gui.open();
 
 
 }
 
-function createCSS3DObject(s) {
-    // create outerdiv and set inner HTML from supplied string
-    var div = document.createElement('iframe');
-    div.innerHTML = s;
-    // set some values on the div to style it, standard CSS
-    div.style.width = this.renderer.domElement.width /3;
-    div.style.height = this.renderer.domElement.height /2;
-    div.style.opacity = 0.7;
-    div.style.background = new THREE.Color(Math.random() * 0xffffff).getStyle();
-    // create a CSS3Dobject and return it.
-    div.src = "http://www.opnbk.com/test.html";
-    var object = new THREE.CSS3DObject(div);
-    return object;
-}
-
+// function updateGui() {
+//     for (var i in gui.__controllers) {
+//         gui.__controllers[i].updateDisplay();
+//     }
+// }
 
 function onWindowResize() {
     this.camera.aspect = window.innerWidth / window.innerHeight;
@@ -282,30 +288,7 @@ function onDocumentTouchEnd(event) {
     mouse.y = -(event.changedTouches[0].PageY / window.innerHeight) * 2 + 1;
 
     raycaster.setFromCamera(mouse, camera);
-    var intersects = raycaster.intersectObjects(scene.children);
-
-    if (intersects.length > 0) {
-
-        togglecameraview = true;
-
-        //alert(intersects[0].object.name);
-        intersect = intersects[0].object.name;
-        isMeshName = intersect.includes("tela");
-      
-
-
-
-        if (!isMeshName) {
-            if (intersects[0].object.name === "bottonsphere") {
-                bottonsphere = true;
-            } else {
-                bottonsphere = false;
-            }
-           
-        } else {
-            intersects[0].material.color = new THREE.Color(0x000000);
-        }
-    }
+    const intersects = raycaster.intersectObjects(yourObject3D);
 }
 
 function onDocumentMouseDown(event) {
@@ -315,7 +298,8 @@ function onDocumentMouseDown(event) {
     var mouse = new THREE.Vector2(); // create once
 
 
-  
+    //    mouse.x = ( event.touches[0].pageX / renderer.domElement.clientWidth) * 2 - 1;
+    //     mouse.y = -( event.touches[0].pageY / renderer.domElement.clientHeight) * 2 + 1;
     mouse.x = (event.clientX / renderer.domElement.clientWidth) * 2 - 1;
     mouse.y = -(event.clientY / renderer.domElement.clientHeight) * 2 + 1;
 
@@ -333,7 +317,23 @@ function onDocumentMouseDown(event) {
         //alert(intersects[0].object.name);
         intersect = intersects[0].object.name;
         isMeshName = intersect.includes("tela");
-      
+        if (isMeshName) {
+            alert(intersect);
+        }
+        //alert(""+intersect);
+        //alert('colidiu');
+        //controller.selected_cube = selectedObject.name;
+        // alert("camera rotation y: "+ camera.rotation.y + "\n" +
+        // "camera position x: " + camera.position.x + "\n"+
+        // "camera position y: " + camera.position.y + "\n"+
+        // "camera position z: " + camera.position.z + "\n")
+
+        // posx = 189.9
+        // posy = 192.46
+        // posz = 0
+        // rotation z 1.35
+
+        // x = 0, y = 344, z - 1.19
 
 
 
@@ -343,7 +343,9 @@ function onDocumentMouseDown(event) {
             } else {
                 bottonsphere = false;
             }
-           
+            // intersects[0].object.material.transparent = true;
+            // intersects[0].object.material.opacity = 0.1;
+            // intersects[0].object.material.color.set(0xff0000);
         } else {
             intersects[0].material.color = new THREE.Color(0x000000);
         }
@@ -409,14 +411,11 @@ function animate() {
             }
         }
     }
-  
+    // updateGui();
     render();
-   
+    //stats.update();
 }
 
 function render() {
-    
     this.renderer.render(this.scene, this.camera);
-    this.renderer2.render(this.scene2, camera);
-    
 }
