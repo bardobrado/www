@@ -8,7 +8,7 @@ this.camera;
 this.scene;
 this.renderer;
 
-var stats, w, h, sphere, sphere1, togglecameraview, controller;
+var stats, w, h, sphere, sphere1, togglecameraview;
 
 //const gui = new dat.GUI();
 
@@ -34,9 +34,7 @@ function init() {
     this.scene.background = new THREE.Color(0x000000);
     this.scene.fog = new THREE.Fog(0x000000, 200, 500);
 
-    this.camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    this.camera.position.set(0, window.innerWidth / 10, 190);
-    this.camera.lookAt(this.scene.position);
+
 
     this.renderer = new THREE.WebGLRenderer({
         antialias: true
@@ -44,6 +42,10 @@ function init() {
     this.renderer.setPixelRatio(window.devicePixelRatio);
     this.renderer.setSize(window.innerWidth, window.innerHeight);
     this.renderer.shadowMap.enabled = true;
+
+    this.camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    this.camera.position.set(0, 108, 190);
+    this.camera.lookAt(this.scene.position);
 
     let light = new THREE.HemisphereLight(0xffffff, 0x444444);
     light.position.set(0, 200, 0);
@@ -198,6 +200,8 @@ function init() {
     this.controls.enableZoom = false;
     this.controls.update();
 
+    
+
     // stats = new Stats();
     // this.container.appendChild(stats.dom);
 
@@ -254,6 +258,13 @@ function onWindowResize() {
     this.camera.aspect = window.innerWidth / window.innerHeight;
     this.camera.updateProjectionMatrix();
     this.renderer.setSize(window.innerWidth, window.innerHeight);
+
+    this.composer = new THREE.EffectComposer(this.renderer);
+
+    if (instance.renderer)
+        instance.renderer.setSize(instance.dom.clientWidth, instance.dom.clientHeight);
+    if (instance.composer)
+        instance.composer.setSize(instance.dom.clientWidth, instance.dom.clientHeight);
 }
 
 function onDocumentMouseDown(event) {
@@ -275,7 +286,7 @@ function onDocumentMouseDown(event) {
 
     if (intersects.length > 0) {
 
-        var intersect = intersects[ 0 ].object.name;
+        var intersect = intersects[0].object.name;
         //alert(""+intersect);
         //alert('colidiu');
         //controller.selected_cube = selectedObject.name;
@@ -362,7 +373,7 @@ function animate() {
     }
     // updateGui();
     render();
-    stats.update();
+    //stats.update();
 }
 
 function render() {
