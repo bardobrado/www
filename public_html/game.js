@@ -71,6 +71,7 @@ function init() {
      div.position.y = 130;
      div.position.z = 0;
      div.rotation.y = Math.PI/2;
+     
      scene2.add(div);
 
      //CSS3D Renderer
@@ -233,8 +234,8 @@ function init() {
     //this.controls.mouseButtons.ORBIT = 0;
     //this.controls.mouseButtons.PAN = 0;
     // if (this.controls.maxPolarAngle == Math.PI / 2) {
-    //this.controls.enableZoom = false;
-    this.controls.enabled = false;
+    this.controls.enableZoom = false;
+    //this.controls.enabled = false;
     this.controls.update();
 
   
@@ -246,14 +247,16 @@ function init() {
 function createCSS3DObject(s) {
     // create outerdiv and set inner HTML from supplied string
     var div = document.createElement('iframe');
-    div.innerHTML = s;
+    //div.innerHTML = s;
     // set some values on the div to style it, standard CSS
-    div.style.width = this.renderer.domElement.width /3;
+    //div.style.width = div.contentWindow.document.body.scrollWidth + 'px';
+    div.style.width = this.renderer.domElement.width /2;
     div.style.height = this.renderer.domElement.height /2;
     div.style.opacity = 0.7;
-    div.style.background = new THREE.Color(Math.random() * 0xffffff).getStyle();
+    //div.style.background = new THREE.Color(Math.random() * 0xffffff).getStyle();
     // create a CSS3Dobject and return it.
-    div.src = "http://www.opnbk.com/test.html";
+    div.src = "https://crazynessmyths.blogspot.com/";
+    
     var object = new THREE.CSS3DObject(div);
     return object;
 }
