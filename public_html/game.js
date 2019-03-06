@@ -229,7 +229,7 @@ class Game {
         var vectorClick = new THREE.Vector3(xDoMouse,yDoMouse, 1);
 
         // converte de tela normalizada em coordenadas do mundo
-        vectorClick = vectorClick.unproject(this.camera);
+        vectorClick = vectorClick.unprojectVector( vectorClick, this.camera);
 
         // raycasting: traça um raio de um ponto a outro verificando
         // se colide com algum objeto
