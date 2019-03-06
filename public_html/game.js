@@ -10,7 +10,7 @@ this.renderer;
 
 var stats, w, h, sphere, sphere1, togglecameraview, controller;
 
-const gui = new dat.GUI();
+//const gui = new dat.GUI();
 
 this.container = document.createElement('div');
 this.container.style.height = '100%';
@@ -244,11 +244,11 @@ function init() {
 
 }
 
-function updateGui() {
-    for (var i in gui.__controllers) {
-        gui.__controllers[i].updateDisplay();
-    }
-}
+// function updateGui() {
+//     for (var i in gui.__controllers) {
+//         gui.__controllers[i].updateDisplay();
+//     }
+// }
 
 function onWindowResize() {
     this.camera.aspect = window.innerWidth / window.innerHeight;
@@ -360,7 +360,7 @@ function animate() {
 
         }
     }
-    updateGui();
+    // updateGui();
     render();
     stats.update();
 }
