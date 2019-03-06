@@ -181,8 +181,8 @@ function init() {
     var outsideUniforms = glowMesh.outsideMesh.material.uniforms;
     outsideUniforms.glowColor.value.set('hotpink');
 
-    var axes = new THREE.AxisHelper(250);
-    this.scene.add(axes);
+    //var axes = new THREE.AxisHelper(250);
+    //this.scene.add(axes);
 
     this.container.appendChild(this.renderer.domElement);
 
@@ -192,10 +192,10 @@ function init() {
     this.controls.maxPolarAngle = Math.PI / 2 - 0.22;
     this.controls.minAzimuthAngle = Math.PI / 2;
     this.controls.maxAzimuthAngle = Math.PI / 2;
-    //this.controls.mouseButtons.ORBIT = 0;
+    this.controls.mouseButtons.ORBIT = 0;
     this.controls.mouseButtons.PAN = 0;
     // if (this.controls.maxPolarAngle == Math.PI / 2) {
-    //this.controls.enableZoom = false;
+    this.controls.enableZoom = false;
     this.controls.update();
 
     stats = new Stats();
