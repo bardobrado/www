@@ -28,7 +28,10 @@ window.onError = function (error) {
 
 function init() {
 
-
+    var grid = [];
+    grid.push(3);
+    grid.push(5);
+    //alert(grid);
 
     this.scene = new THREE.Scene();
     this.scene.background = new THREE.Color(0xd3dce5);
@@ -62,7 +65,7 @@ function init() {
 
     //grid
     var divisions1 = 5;
-    var size1w = window.innerWidth / 5;
+    var size1w = 380;
     var sizew = size1w || 10;
     var divisions = divisions1 || 10;
     var step = sizew / divisions;
@@ -92,56 +95,59 @@ function init() {
         opacity: 0.3
     });
     meshlinematerial.transparent = true;
-
-    for (var i = 0, j = 0, k = -halfSize; i <= divisions; i++, k += step) {
+    var valor = Math.max.apply(null, grid );
+    for (var i = 0, j = 0, k = -halfSize; i <= Math.max.apply(null, grid) ; i++, k += step) {
         // vertices.push(-halfSize, 0, k, halfSize, 0, k);
         // vertices.push(k, 0, -halfSize, k, 0, halfSize);
+        //if (j > 4) {
+            
+            var v = new THREE.Vector3(( 210- halfSize - 1), 0.5, k * scale);
+            var v0 = new THREE.Vector3((58 + halfSize + 1), 0.5, k * scale);
+            var geometry3 = new THREE.Geometry();
+            geometry3.vertices.push(v);
+            geometry3.vertices.push(v0);
 
-        var v = new THREE.Vector3(+210 - halfSize - 1, 0.5, k * scale);
-        var v0 = new THREE.Vector3(210 + halfSize + 1, 0.5, k * scale);
-        var v1 = new THREE.Vector3(210 + k, 0.5, -halfSize * scale);
-        var v2 = new THREE.Vector3(210 + k, 0.5, halfSize * scale);
+            var line = new MeshLine();
+            line.setGeometry(geometry3, function (p) {
+                return 2;
+            });
+            var mesh0 = new THREE.Mesh(line.geometry, meshlinematerial);
+            this.scene.add(mesh0);
 
-        var geometry3 = new THREE.Geometry();
+            if ( i > 1) {
+                //alert(i)
+            var v1 = new THREE.Vector3(58 + k , 0.5, halfSize * scale);
+            var v2 = new THREE.Vector3(58 + k, 0.5, -halfSize * scale);
+            var geometry4 = new THREE.Geometry();
+            geometry4.vertices.push(v1);
+            geometry4.vertices.push(v2);
 
-        var geometry4 = new THREE.Geometry();
-        geometry3.vertices.push(v);
-        geometry3.vertices.push(v0);
-        geometry4.vertices.push(v1);
-        geometry4.vertices.push(v2);
+            var line2 = new MeshLine();
+            line2.setGeometry(geometry4, function (p) {
+                return 2;
+            });
+            var mesh1 = new THREE.Mesh(line2.geometry, meshlinematerial);
+            this.scene.add(mesh1);
+       
 
-        var line = new MeshLine();
-        line.setGeometry(geometry3, function (p) {
-            return 2;
-        });
-        var mesh0 = new THREE.Mesh(line.geometry, meshlinematerial);
-        this.scene.add(mesh0);
+            for (var m = 0; m < divisions; m++) {
+                if (i < divisions) {
 
+                    var mesh = new THREE.Mesh(new THREE.PlaneBufferGeometry(step, step * scale), material1);
 
-        var line2 = new MeshLine();
-        line2.setGeometry(geometry4, function (p) {
-            return 2;
-        });
-        var mesh1 = new THREE.Mesh(line2.geometry, meshlinematerial);
-        this.scene.add(mesh1);
+                    mesh.name = "tela" + j;
+                    mesh.rotation.x = -Math.PI / 2;
+                    mesh.position.x = +210 + (halfSize - step / 2) + i * (-step);
+                    mesh.position.z = (halfSize - step / 2) * scale + m * (-step) * scale;
 
-        for (var m = 0; m < divisions; m++) {
-            if (i < divisions) {
+                    mesh.receiveShadow = true;
+                    //mesh.material.color = new THREE.Color(Math.random()* 1/255, Math.random()* 1/255, Math.random()* 1/255);
 
-                var mesh = new THREE.Mesh(new THREE.PlaneBufferGeometry(step, step * scale), material1);
+                    //mesh.geometry.colorsNeedUpdate = true;
 
-                mesh.name = "tela" + j;
-                mesh.rotation.x = -Math.PI / 2;
-                mesh.position.x = +210 + (halfSize - step / 2) + i * (-step);
-                mesh.position.z = (halfSize - step / 2) * scale + m * (-step) * scale;
-
-                mesh.receiveShadow = true;
-                //mesh.material.color = new THREE.Color(Math.random()* 1/255, Math.random()* 1/255, Math.random()* 1/255);
-
-                //mesh.geometry.colorsNeedUpdate = true;
-
-                scene.add(mesh);
-                j++;
+                    scene.add(mesh);
+                    j++;
+                }
             }
         }
     }
@@ -199,10 +205,10 @@ function init() {
     this.controls.maxPolarAngle = Math.PI / 2 - 0.22;
     this.controls.minAzimuthAngle = Math.PI / 2;
     this.controls.maxAzimuthAngle = Math.PI / 2;
-    this.controls.mouseButtons.ORBIT = 0;
+    //this.controls.mouseButtons.ORBIT = 0;
     this.controls.mouseButtons.PAN = 0;
     // if (this.controls.maxPolarAngle == Math.PI / 2) {
-    this.controls.enableZoom = false;
+    //this.controls.enableZoom = false;
     this.controls.update();
 
 
@@ -307,7 +313,7 @@ function onDocumentMouseDown(event) {
     if (intersects.length > 0) {
 
         togglecameraview = true;
-        
+
         //alert(intersects[0].object.name);
         intersect = intersects[0].object.name;
         isMeshName = intersect.includes("tela");
@@ -330,7 +336,7 @@ function onDocumentMouseDown(event) {
         // x = 0, y = 344, z - 1.19
 
 
-        
+
         if (!isMeshName) {
             if (intersects[0].object.name === "bottonsphere") {
                 bottonsphere = true;
