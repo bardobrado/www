@@ -6,26 +6,27 @@
 		</style>
 	</head>
 	<body>
-		<script src="libs/three.min.js"></script>
+		<script src="libs/three.js"></script>
 		<script src="libs/inflate.min.js"></script>
 		<script src="libs/FBXLoader.js"></script>
 		<script src="libs/OrbitControls.js"></script>
 		<script src="libs/Detector.js"></script>
+		<script src="libs/stats.min.js"></script>
+
+		<script src="/node_modules/dat.gui/build/dat.gui.min.js"></script>
+
 		<script src='threex/threex.dilategeometry.js'></script>
 		<script src='threex/threex.atmospherematerial.js'></script>
 		<script src="threex/threex.geometricglowmesh.js"></script>
 		<script src="threex/threex.linesegmentsglow.js"></script>
 		<script src="threex/threex.atmospherematerialdatgui.js"></script>
 		<script src="threex/threex.domevent.js"></script>
+		
 		<script src="meshline/src/THREE.MeshLine.js"></script>
+
 		
 		<script src="game.js"></script>
 
-		<script>
-            document.addEventListener("DOMContentLoaded", function(){
-				const game = new Game();
-				window.game = game;//For debugging only
-			});
-		</script>
+		
 	</body>
 </html>
