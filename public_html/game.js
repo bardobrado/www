@@ -198,48 +198,48 @@ function init() {
     this.controls.enableZoom = false;
     this.controls.update();
 
-    stats = new Stats();
-    this.container.appendChild(stats.dom);
+    // stats = new Stats();
+    // this.container.appendChild(stats.dom);
 
 
 
-    var obj = {
-        cameraX: camera.position.x,
-        cameraY: camera.position.y,
-        cameraZ: camera.position.z,
-        cameraRotY: camera.rotation.z,
+    // var obj = {
+    //     cameraX: camera.position.x,
+    //     cameraY: camera.position.y,
+    //     cameraZ: camera.position.z,
+    //     cameraRotY: camera.rotation.z,
 
-    }
-    gui.remember(obj);
+    // }
+    // gui.remember(obj);
 
-    //gui.add(controller, 'selected_cube').listen();
-    var sphereX = gui.add(obj, 'cameraX').min(0).max(200).step(0.25);
-    var sphereY = gui.add(obj, 'cameraY').min(0).max(200).step(0.25);
-    var sphereZ = gui.add(obj, 'cameraZ').min(0).max(200).step(0.25);
-    var camerarotY = gui.add(obj, 'cameraRotY').min(0).max(1).step(0.0001);
-
-
-    sphereX.onChange(function (value) {
-        camera.position.x = value;
-        updateGui();
-    });
-    sphereY.onChange(function (value) {
-        camera.position.y = value;
-        updateGui();
-    });
-    sphereZ.onChange(function (value) {
-        camera.position.z = value;
-        updateGui();
-    });
-    camerarotY.onChange(function (value) {
-        camera.rotation.y = value;
-        updateGui();
-    });
+    // //gui.add(controller, 'selected_cube').listen();
+    // var sphereX = gui.add(obj, 'cameraX').min(0).max(200).step(0.25);
+    // var sphereY = gui.add(obj, 'cameraY').min(0).max(200).step(0.25);
+    // var sphereZ = gui.add(obj, 'cameraZ').min(0).max(200).step(0.25);
+    // var camerarotY = gui.add(obj, 'cameraRotY').min(0).max(1).step(0.0001);
 
 
-    //gui.add(rotationY, 'rotationY').listen();
+    // sphereX.onChange(function (value) {
+    //     camera.position.x = value;
+    //     updateGui();
+    // });
+    // sphereY.onChange(function (value) {
+    //     camera.position.y = value;
+    //     updateGui();
+    // });
+    // sphereZ.onChange(function (value) {
+    //     camera.position.z = value;
+    //     updateGui();
+    // });
+    // camerarotY.onChange(function (value) {
+    //     camera.rotation.y = value;
+    //     updateGui();
+    // });
 
-    gui.open();
+
+    // //gui.add(rotationY, 'rotationY').listen();
+
+    // gui.open();
 
 
 }
