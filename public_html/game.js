@@ -28,6 +28,8 @@ var string = '<div>' +
 '<textarea> And this is a textarea</textarea>' +
 '</div>';
 
+var string2 ="https://crazynessmyths.blogspot.com/";
+
 init();
 animate();
 
@@ -66,7 +68,7 @@ function init() {
      element.style.padding = "2em";
 
      //CSS Object
-     div = createCSS3DObject(string);
+     div = createCSS3DObject(string2);
      div.position.x = -200;
      div.position.y = 130;
      div.position.z = 0;
@@ -234,7 +236,7 @@ function init() {
     //this.controls.mouseButtons.ORBIT = 0;
     //this.controls.mouseButtons.PAN = 0;
     // if (this.controls.maxPolarAngle == Math.PI / 2) {
-    this.controls.enableZoom = false;
+    //this.controls.enableZoom = false;
     //this.controls.enabled = false;
     this.controls.update();
 
@@ -246,18 +248,19 @@ function init() {
 
 function createCSS3DObject(s) {
     // create outerdiv and set inner HTML from supplied string
-    var div = document.createElement('iframe');
+    var iframe = document.createElement('iframe');
     //div.innerHTML = s;
     // set some values on the div to style it, standard CSS
     //div.style.width = div.contentWindow.document.body.scrollWidth + 'px';
-    div.style.width = this.renderer.domElement.width /2;
-    div.style.height = this.renderer.domElement.height /2;
-    div.style.opacity = 0.7;
+    iframe.style.width = window.innerWidth / 1.777;
+    iframe.style.height = window.innerHeight /2;
+    iframe.style.opacity = 0.7;
+    iframe.target = "_self";
     //div.style.background = new THREE.Color(Math.random() * 0xffffff).getStyle();
     // create a CSS3Dobject and return it.
-    div.src = "https://crazynessmyths.blogspot.com/";
+    iframe.src = s;
     
-    var object = new THREE.CSS3DObject(div);
+    var object = new THREE.CSS3DObject(iframe);
     return object;
 }
 
