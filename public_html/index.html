@@ -1,48 +1,91 @@
 <html>
-	<head>
-		<title>Openbook</title>
-		<style>
-			body { margin: 0; }
-		</style>
-		<style type="text/css">
 
-			textarea, iframe{
-		
-				display: block;
-		
-				margin: 10px 0;
-		
-			}
-		
-		</style>
-	</head>
-	<body>
+<head>
+	<title>Openbook</title>
 
-		<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<style type="text/css">
+		body {
+			margin: 0;
+			overflow: hidden;
+		}
 
-		<script src="libs/three.js"></script>
-		<script src="libs/inflate.min.js"></script>
-		<script src="libs/FBXLoader.js"></script>
-		<script src="libs/OrbitControls.js"></script>
-		<script src="libs/Detector.js"></script>
-		<script src="libs/stats.min.js"></script>
+		#all {
+			margin: 0;
+		}
 
-		<script src="/node_modules/dat.gui/build/dat.gui.min.js"></script>
+		#container {
+			background-color: #000000;
+			margin-top: 0%;
+			margin-left: 0%;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: 0.0;
+		}
 
-		<script src='threex/threex.dilategeometry.js'></script>
-		<script src='threex/threex.atmospherematerial.js'></script>
-		<script src="threex/threex.geometricglowmesh.js"></script>
-		<script src="threex/threex.linesegmentsglow.js"></script>
-		<script src="threex/threex.atmospherematerialdatgui.js"></script>
-		<script src="threex/threex.domevent.js"></script>
-		
-		<script src="meshline/src/THREE.MeshLine.js"></script>
+		#overlay {
+			background-color: #ff00ff;
+			margin-top: 3%;
+			margin-left: 2%;
+			width: 85%;
+			height: 77%;
+			position: absolute;
+			top: 4%;
+			left: 5%;
+			opacity: 1;
 
-		<script src="https://threejs.org/examples/js/renderers/CSS3DRenderer.js"></script>
+		}
 
-		
+		#url {
+
+			background-color: #ff0000;
+			margin-top: 2%;
+			margin-left: 2%;
+			width: 85%;
+			height: 5%;
+			position: absolute;
+			top: 0;
+			left: 5%;
+			opacity: 1;
+
+		}
+	</style>
+</head>
+
+<body>
+
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+	<script src="libs/three.js"></script>
+	<script src="libs/inflate.min.js"></script>
+	<script src="libs/FBXLoader.js"></script>
+	<script src="libs/OrbitControls.js"></script>
+	<script src="libs/Detector.js"></script>
+	<script src="libs/stats.min.js"></script>
+
+	<script src="/node_modules/dat.gui/build/dat.gui.min.js"></script>
+
+	<script src='threex/threex.dilategeometry.js'></script>
+	<script src='threex/threex.atmospherematerial.js'></script>
+	<script src="threex/threex.geometricglowmesh.js"></script>
+	<script src="threex/threex.linesegmentsglow.js"></script>
+	<script src="threex/threex.atmospherematerialdatgui.js"></script>
+	<script src="threex/threex.domevent.js"></script>
+
+	<script src="meshline/src/THREE.MeshLine.js"></script>
+
+	<script src="https://threejs.org/examples/js/renderers/CSS3DRenderer.js"></script>
+
+
+	<div id="all">
 		<script src="game.js"></script>
+		<div id="container">
+			<div id="url"></div>
+			<div id="overlay"></div>
+		</div>
+	</div>
+</body>
 
-		
-	</body>
 </html>
