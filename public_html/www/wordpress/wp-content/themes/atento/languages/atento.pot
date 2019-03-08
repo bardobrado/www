@@ -1,0 +1,1131 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Atento\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-02-15 06:17+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.2.0; wp-5.0.3"
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:125
+msgid " Upgrade to Pro"
+msgstr ""
+
+#: template-parts/footer/footer-bar.php:67
+msgid ""
+"&nbsp;& choose menu to display in footer bar from ( Appearance - > Customize "
+"-> Footer - > Footer Menu )"
+msgstr ""
+
+#: inc/framework/customizer/panel/sections.php:119
+msgid "404 Error Page"
+msgstr ""
+
+#: inc/framework/customizer/panel/hero.php:65
+msgid "Add new content"
+msgstr ""
+
+#: functions.php:135 functions.php:153
+msgid "Add widgets here."
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:374
+msgid "Advanced 404 Error Page Editor"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:331
+msgid "Advanced Archive/Blog Settings"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:264
+msgid "Advanced Header Settings"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:367
+msgid "Advanced Post/Page Options"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:355
+msgid "Advanced Post/Page Settings"
+msgstr ""
+
+#: inc/framework/customizer/panel/post.php:54
+msgid "After Footer Content"
+msgstr ""
+
+#: inc/framework/customizer/panel/sections.php:47
+msgid ""
+"After making changes to \"Enable Extra Settings\" it needs to \"Publish\" "
+"and \"Reload Customizer\" to load files and take effects on Customizer."
+msgstr ""
+
+#: inc/helpers/template-functions.php:164
+msgid "All rights reserved"
+msgstr ""
+
+#: inc/framework/customizer/panel/archive.php:16
+msgid "Archive/Blog Settings"
+msgstr ""
+
+#. 1: Taxonomy singular name, 2: Current taxonomy term
+#: inc/helpers/template-functions.php:243
+#: inc/helpers/template-functions.php:252
+msgid "Archives"
+msgstr ""
+
+#. Name of the theme
+#: inc/framework/welcome-screen/class-welcome-screen.php:144
+msgid "Atento"
+msgstr ""
+
+#. Description of the theme
+msgid ""
+"Atento is a minimalist WordPress blog theme beautifully crafted to help you "
+"create a stunning blog, suitable for any kind of blog fashion, travel, music,"
+" car, real state, beauty, design, food, wedding, movie, photography, "
+"technology, personal blog sites. It is designed with a focus on minimal &amp;"
+" clean design, unique styling, elegant typography selection to highlight and "
+"emphasis your blog content to your readers."
+msgstr ""
+
+#: inc/libraries/back-compat.php:29 inc/libraries/back-compat.php:39
+#: inc/libraries/back-compat.php:52
+#, php-format
+msgid ""
+"Atento requires at least PHP version 5.4.0. You are running version %s. "
+"Please upgrade and try again."
+msgstr ""
+
+#: inc/helpers/template-functions.php:207
+#: inc/framework/customizer/panel/archive.php:55
+msgid "Author"
+msgstr ""
+
+#: inc/framework/customizer/panel/post.php:25
+#: inc/framework/customizer/panel/post.php:59
+#: inc/framework/customizer/panel/sections.php:159
+msgid "Author Box"
+msgstr ""
+
+#: inc/helpers/theme-hooks.php:150
+msgid "Author Website"
+msgstr ""
+
+#: inc/framework/customizer/panel/footer.php:110
+msgid "Background"
+msgstr ""
+
+#: inc/framework/customizer/panel/post.php:30
+msgid "Before/After Widgets"
+msgstr ""
+
+#: inc/framework/customizer/panel/typography.php:23
+#: inc/framework/customizer/panel/typography.php:54
+msgid "Body"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:294
+msgid "Built-in Custom Widgets"
+msgstr ""
+
+#: inc/framework/customizer/panel/sections.php:131
+msgid "Button Setting"
+msgstr ""
+
+#: inc/framework/customizer/panel/hero.php:105
+msgid "Button Text"
+msgstr ""
+
+#: inc/framework/customizer/panel/hero.php:110
+msgid "Button URL"
+msgstr ""
+
+#: inc/framework/customizer/customizer.php:136
+msgid "Buy PRO Version"
+msgstr ""
+
+#: inc/framework/customizer/panel/archive.php:54
+msgid "Categories"
+msgstr ""
+
+#: inc/helpers/template-functions.php:199
+msgid "Category"
+msgstr ""
+
+#: inc/helpers/template-functions.php:562
+msgid "Center"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:123
+msgid "Changelog"
+msgstr ""
+
+#: inc/helpers/template-functions.php:523
+msgid "Choose a Menu"
+msgstr ""
+
+#: inc/framework/customizer/panel/archive.php:47
+msgid ""
+"Click on eye icon to enable/disable item, drag & drop items to re-arrange "
+"order of appearance."
+msgstr ""
+
+#: inc/framework/customizer/panel/sections.php:68
+msgid "Coming Soon"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:240
+msgid "Coming Soon Page"
+msgstr ""
+
+#: inc/framework/customizer/panel/post.php:62
+msgid "Comment Section"
+msgstr ""
+
+#: comments.php:66
+msgid "Comments are closed."
+msgstr ""
+
+#. 1: comment count number, 2: title.
+#: comments.php:40
+#, php-format
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/libraries/tgm/tgm.php:31
+msgid "Contact Form 7"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:416
+msgid "Contact Form 7 Compatible"
+msgstr ""
+
+#: inc/framework/customizer/panel/hero.php:24
+#: inc/framework/customizer/panel/hero.php:63
+#: inc/framework/customizer/panel/archive.php:46
+msgid "Content"
+msgstr ""
+
+#: inc/framework/customizer/panel/footer.php:65
+msgid "Content Order"
+msgstr ""
+
+#: inc/framework/customizer/panel/post.php:23
+msgid "Content Settings"
+msgstr ""
+
+#: inc/helpers/template-functions.php:159
+msgid "Copyright &copy;"
+msgstr ""
+
+#: inc/framework/customizer/panel/footer.php:72
+msgid "Copyright Text"
+msgstr ""
+
+#. If there are characters in your language that are not supported by Barlow, translate this to 'off'. Do not translate into your own language.
+#: functions.php:203
+msgctxt "Cormorant Garamond font: on or off"
+msgid "on"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:324
+msgid "Custom Responsive Values"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:325
+msgid ""
+"Custom Responsive values for different screen size(Desktop, Tablet, Mobile)."
+msgstr ""
+
+#: inc/framework/customizer/panel/sections.php:132
+msgid "Customizer -> General Settings"
+msgstr ""
+
+#: inc/framework/customizer/panel/sections.php:146
+msgid "Customizer -> Global Settings"
+msgstr ""
+
+#: inc/framework/customizer/panel/sections.php:81
+msgid "Customizer -> Menus"
+msgstr ""
+
+#: inc/framework/customizer/panel/sections.php:214
+msgid "Customizer -> Single Page Settings"
+msgstr ""
+
+#: inc/framework/customizer/panel/sections.php:160
+#: inc/framework/customizer/panel/sections.php:173
+#: inc/framework/customizer/panel/sections.php:187
+#: inc/framework/customizer/panel/sections.php:201
+msgid "Customizer -> Single Post Settings"
+msgstr ""
+
+#: inc/helpers/template-functions.php:220
+msgctxt "daily archives date format"
+msgid "F j, Y"
+msgstr ""
+
+#: inc/framework/customizer/panel/archive.php:56
+msgid "Date"
+msgstr ""
+
+#: inc/helpers/template-functions.php:219
+msgid "Day"
+msgstr ""
+
+#: inc/framework/meta-boxes/class-meta-box.php:317
+msgid "Default"
+msgstr ""
+
+#: inc/framework/customizer/panel/archive.php:106
+msgid ""
+"Default layout is inherit from global settings. Assign new default layout "
+"for all archive pages."
+msgstr ""
+
+#: inc/framework/customizer/panel/page.php:42
+msgid ""
+"Default layout is inherit from global settings. Assign new default layout "
+"for all single page."
+msgstr ""
+
+#: inc/framework/customizer/panel/post.php:75
+msgid ""
+"Default layout is inherit from global settings. Assign new default layout "
+"for all single post."
+msgstr ""
+
+#: inc/framework/meta-boxes/class-meta-box.php:324
+msgid "Default value is inherit from single post or page settings."
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:178
+msgid "Demo content"
+msgstr ""
+
+#: inc/helpers/template-functions.php:165
+msgid "Designed by"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:76
+msgid "Dismiss"
+msgstr ""
+
+#: inc/framework/customizer/panel/footer.php:91
+msgid "Display a menu"
+msgstr ""
+
+#: inc/framework/customizer/panel/header.php:86
+msgid "Display Site Title"
+msgstr ""
+
+#: inc/framework/customizer/panel/header.php:99
+msgid "Display Tagline"
+msgstr ""
+
+#: inc/framework/customizer/panel/theme-info.php:52
+msgid "Documentation"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:162
+msgid "Documentation & Installation Guide"
+msgstr ""
+
+#: inc/framework/customizer/panel/post.php:55
+#: inc/framework/customizer/panel/footer.php:66
+msgid "Drag & Drop items to re-arrange order of appearance."
+msgstr ""
+
+#. %s: Name of current post. Only visible to screen readers
+#: template-parts/page/content-page.php:69 template-parts/post/content.php:120
+#, php-format
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr ""
+
+#: inc/framework/customizer/panel/hero.php:23
+#: inc/framework/customizer/panel/footer.php:45
+msgid "Enable"
+msgstr ""
+
+#: inc/framework/customizer/panel/sections.php:15
+msgid "Enable Extra Settings"
+msgstr ""
+
+#: inc/framework/customizer/panel/hero.php:46
+msgid "Enable hero slider on homepage and static homepage."
+msgstr ""
+
+#: inc/framework/customizer/panel/footer.php:46
+msgid "Enable it to display Footer Widget Area on all Pages."
+msgstr ""
+
+#: inc/framework/customizer/panel/sections.php:38
+msgid ""
+"Enable more setting options section in the customizer to have more "
+"customization features. Enabling more sections may cause customizer loading "
+"speed."
+msgstr ""
+
+#: inc/framework/customizer/panel/sections.php:106
+msgid "Featured Posts Slider"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:288
+msgid "Featured Posts Slider for Homepage"
+msgstr ""
+
+#: inc/framework/customizer/panel/footer.php:16
+msgid "Footer"
+msgstr ""
+
+#: inc/framework/customizer/panel/footer.php:24
+msgid "Footer Bar"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:404
+msgid "Footer Copyright Editor"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:380
+msgid "Footer Instagram Feed"
+msgstr ""
+
+#: inc/framework/customizer/panel/footer.php:73
+msgid "Footer Menu"
+msgstr ""
+
+#: functions.php:151
+msgid "Footer Widgets Column "
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:235
+msgid "Free Version"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:124
+msgid "Free vs Pro"
+msgstr ""
+
+#: inc/helpers/template-functions.php:545
+msgid "Full Width"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:70
+msgid "Get started with Atento"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:35
+#: inc/framework/welcome-screen/class-welcome-screen.php:36
+#: inc/framework/welcome-screen/class-welcome-screen.php:121
+msgid "Getting Started"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:202
+msgid "Go to Customizer"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:187
+msgid "Go to the importer"
+msgstr ""
+
+#: inc/framework/customizer/panel/typography.php:26
+#: inc/framework/customizer/panel/typography.php:143
+msgid "H1"
+msgstr ""
+
+#: inc/framework/customizer/panel/typography.php:27
+#: inc/framework/customizer/panel/typography.php:165
+msgid "H2"
+msgstr ""
+
+#: inc/framework/customizer/panel/typography.php:28
+#: inc/framework/customizer/panel/typography.php:187
+msgid "H3"
+msgstr ""
+
+#: inc/framework/customizer/panel/typography.php:29
+#: inc/framework/customizer/panel/typography.php:209
+msgid "H4"
+msgstr ""
+
+#: inc/framework/customizer/panel/typography.php:30
+#: inc/framework/customizer/panel/typography.php:231
+msgid "H5"
+msgstr ""
+
+#: inc/framework/customizer/panel/typography.php:31
+#: inc/framework/customizer/panel/typography.php:253
+msgid "H6"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:142
+msgid "Have you ❤ using Atento? Please rate ⭐⭐⭐⭐⭐ our theme"
+msgstr ""
+
+#: inc/framework/customizer/panel/header.php:16
+msgid "Header"
+msgstr ""
+
+#: inc/framework/customizer/panel/header.php:24
+msgid "Header Image"
+msgstr ""
+
+#: inc/framework/customizer/panel/header.php:113
+msgid ""
+"Header Image will not display on Homepage or Static Homepage if Hero Section "
+"is enable."
+msgstr ""
+
+#: inc/framework/customizer/panel/sections.php:80
+msgid "Header Menu Settings"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:97
+msgid "Hello"
+msgstr ""
+
+#: inc/framework/customizer/panel/sections.php:93
+msgid "Hero Content"
+msgstr ""
+
+#: inc/framework/customizer/panel/hero.php:16
+msgid "Hero Section"
+msgstr ""
+
+#: template-parts/hero/content-hero.php:12
+#: inc/framework/customizer/panel/hero.php:75
+msgid "Hero Short Description Here."
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:282
+msgid "Hero Slider Support"
+msgstr ""
+
+#: template-parts/hero/content-hero.php:10
+#: inc/framework/customizer/panel/hero.php:73
+msgid "Hero Title"
+msgstr ""
+
+#: inc/framework/customizer/panel/hero.php:45
+msgid "Homepage"
+msgstr ""
+
+#. Author URI of the theme
+msgid "https://precisethemes.com/"
+msgstr ""
+
+#. URI of the theme
+msgid "https://precisethemes.com/wordpress-theme/atento/"
+msgstr ""
+
+#: inc/framework/customizer/panel/hero.php:84
+msgid "Image"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:191
+msgid "Import Demo"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:410
+msgid "Inbuilt Theme Widgets"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:186
+msgid "Install and Activate"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:181
+msgid ""
+"Install the following plugin and then come back here to access the importer. "
+"With it you can import all demo content and change your homepage and blog "
+"page to the ones from our demo site, automatically. It will also assign a "
+"menu."
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:180
+msgid "Install:  One Click Demo Import"
+msgstr ""
+
+#: 404.php:30
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+
+#: template-parts/content-none.php:44
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: inc/framework/customizer/panel/global.php:25
+msgid "Layout"
+msgstr ""
+
+#: inc/helpers/template-functions.php:561
+msgid "Left"
+msgstr ""
+
+#: inc/helpers/template-functions.php:544
+msgid "Left Sidebar"
+msgstr ""
+
+#: inc/framework/customizer/panel/typography.php:24
+msgid "Logo"
+msgstr ""
+
+#: inc/framework/customizer/panel/header.php:51
+msgid "Logo Height"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:422
+msgid "MailChimp Compatible"
+msgstr ""
+
+#: inc/libraries/tgm/tgm.php:26
+msgid "MailChimp Sign-Up Form"
+msgstr ""
+
+#: inc/framework/customizer/panel/typography.php:25
+#: inc/framework/customizer/panel/typography.php:120
+msgid "Main Menu"
+msgstr ""
+
+#: template-parts/footer/footer-bar.php:66
+msgid "Menu"
+msgstr ""
+
+#: template-parts/footer/footer-bar.php:64
+msgid "Menu not found! Assign a&nbsp;"
+msgstr ""
+
+#: inc/helpers/template-functions.php:215
+msgid "Month"
+msgstr ""
+
+#: inc/helpers/template-functions.php:216
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:200
+msgid ""
+"Most of theme settings customization options are available through theme "
+"customizer. To setup and customise your website elements and sections."
+msgstr ""
+
+#: 404.php:41
+msgid "Most Used Categories"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:172
+#: inc/framework/welcome-screen/class-welcome-screen.php:218
+msgid ""
+"Need help to setup your website with Atento theme? Visit our support forum "
+"and browse support topics or create new, one of our support member will "
+"follow and help you to solver your issue."
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:489
+msgid ""
+"Need help to upgrade your website with Atento Pro theme for more exciting "
+"features and additional theme options."
+msgstr ""
+
+#: inc/framework/customizer/customizer.php:135
+msgid "Need More Options?"
+msgstr ""
+
+#: inc/framework/customizer/panel/hero.php:119
+msgid "New Window"
+msgstr ""
+
+#: template-parts/post/content.php:78 template-parts/post/content.php:80
+msgid "Next Post"
+msgstr ""
+
+#: inc/helpers/template-functions.php:528
+msgid "No Menu set yet"
+msgstr ""
+
+#: inc/framework/meta-boxes/class-meta-box.php:115
+msgid "No meta settings available for this post type or user."
+msgstr ""
+
+#: inc/framework/customizer/panel/header.php:112
+msgid "Note:"
+msgstr ""
+
+#: inc/framework/demo-importer/class-demo.php:184
+msgid ""
+"NOTE: In demo import, category selection could be omitted in old (non-fresh) "
+"WordPress setup. After import is complete, please go to Widgets admin page "
+"under Appearance menu and select the appropriate category in the widgets."
+msgstr ""
+
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:392
+msgid "Number of Footer Widgets Position Layouts"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:258
+msgid "Number of Header Layouts"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:145
+msgid "on WordPress.org ☺ Thank you"
+msgstr ""
+
+#: inc/libraries/tgm/tgm.php:21
+msgid "One Click Demo Importer"
+msgstr ""
+
+#. 1: title.
+#: comments.php:34
+#, php-format
+msgid "One thought on &ldquo;%1$s&rdquo;"
+msgstr ""
+
+#: inc/helpers/theme-hooks.php:217
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: inc/framework/customizer/panel/hero.php:115
+msgid "Open Button URL"
+msgstr ""
+
+#: inc/framework/meta-boxes/class-meta-box.php:154
+msgid "Other"
+msgstr ""
+
+#: inc/framework/customizer/panel/hero.php:139
+msgid "Overlay Background Color"
+msgstr ""
+
+#: inc/framework/customizer/panel/post.php:22
+msgid "Page Header"
+msgstr ""
+
+#: template-parts/page/content-page.php:46 template-parts/post/content.php:49
+msgid "Pages:"
+msgstr ""
+
+#: inc/framework/customizer/panel/archive.php:68
+msgid "Pagination Alignment"
+msgstr ""
+
+#: inc/framework/customizer/panel/archive.php:22
+msgid "Pagination Settings"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:190
+msgid "Plugin installed and active!"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:434
+msgid "Polylang Support in Customizer"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:386
+msgid "Pop up Box"
+msgstr ""
+
+#: inc/helpers/template-functions.php:223
+msgctxt "post format archive title"
+msgid "Asides"
+msgstr ""
+
+#: inc/helpers/template-functions.php:237
+msgctxt "post format archive title"
+msgid "Audio"
+msgstr ""
+
+#: inc/helpers/template-functions.php:239
+msgctxt "post format archive title"
+msgid "Chats"
+msgstr ""
+
+#: inc/helpers/template-functions.php:225
+msgctxt "post format archive title"
+msgid "Galleries"
+msgstr ""
+
+#: inc/helpers/template-functions.php:227
+msgctxt "post format archive title"
+msgid "Images"
+msgstr ""
+
+#: inc/helpers/template-functions.php:233
+msgctxt "post format archive title"
+msgid "Links"
+msgstr ""
+
+#: inc/helpers/template-functions.php:231
+msgctxt "post format archive title"
+msgid "Quotes"
+msgstr ""
+
+#: inc/helpers/template-functions.php:235
+msgctxt "post format archive title"
+msgid "Statuses"
+msgstr ""
+
+#: inc/helpers/template-functions.php:229
+msgctxt "post format archive title"
+msgid "Videos"
+msgstr ""
+
+#: inc/framework/customizer/panel/typography.php:32
+#: inc/framework/customizer/panel/typography.php:275
+msgid "Post Meta"
+msgstr ""
+
+#: inc/framework/customizer/panel/post.php:61
+#: inc/framework/customizer/panel/sections.php:172
+msgid "Post Navigation"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:343
+msgid "Post Navigation Layout"
+msgstr ""
+
+#: inc/framework/customizer/panel/sections.php:145
+msgid "Posts Listing"
+msgstr ""
+
+#. Author of the theme
+msgid "Precise Themes"
+msgstr ""
+
+#: template-parts/post/content.php:75 template-parts/post/content.php:77
+msgid "Previous Post"
+msgstr ""
+
+#: functions.php:80
+msgid "Primary"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:236
+msgid "Pro Version"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:442
+msgid "Quick Ticket Support"
+msgstr ""
+
+#: inc/helpers/template-functions.php:136
+#: template-parts/related-posts/content-single.php:13
+#: template-parts/hero/content-hero.php:13
+#: inc/framework/customizer/panel/hero.php:76
+msgid "Read More"
+msgstr ""
+
+#. 1: link to WP admin new post page.
+#: template-parts/content-none.php:24
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: inc/framework/customizer/panel/hero.php:85
+msgid ""
+"Recommend image width is 1800px and height can be calculated upon \"Hero "
+"Size - in ratio ( at Settings -> Hero Size Ratio )."
+msgstr ""
+
+#: template-parts/related-posts/related-posts.php:19
+#: inc/framework/customizer/panel/post.php:27
+#: inc/framework/customizer/panel/post.php:60
+#: inc/framework/customizer/panel/sections.php:186
+msgid "Related Posts"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:349
+msgid "Related Posts for blog/archive page"
+msgstr ""
+
+#: inc/framework/customizer/panel/sections.php:56
+msgid "Reload Customizer"
+msgstr ""
+
+#: inc/helpers/template-functions.php:563
+msgid "Right"
+msgstr ""
+
+#: inc/helpers/template-functions.php:546
+msgid "Right Sidebar"
+msgstr ""
+
+#. If there are characters in your language that are not supported by Barlow Semi Condensed, translate this to 'off'. Do not translate into your own language.
+#: functions.php:198
+msgctxt "Roboto font: on or off"
+msgid "on"
+msgstr ""
+
+#: inc/framework/customizer/panel/hero.php:118
+msgid "Same Window"
+msgstr ""
+
+#. %s: search query.
+#: inc/helpers/theme-hooks.php:196
+msgid "Search Results for:"
+msgstr ""
+
+#: inc/framework/meta-boxes/class-meta-box.php:56
+msgid "Settings"
+msgstr ""
+
+#: inc/framework/customizer/panel/hero.php:100
+msgid "Short Description"
+msgstr ""
+
+#: inc/framework/customizer/panel/archive.php:91
+msgid "Show grey background colored box in absence of post thumbnail."
+msgstr ""
+
+#: inc/framework/customizer/panel/archive.php:90
+msgid "Show Placeholder"
+msgstr ""
+
+#: functions.php:133 inc/framework/customizer/panel/global.php:16
+#: inc/framework/customizer/panel/archive.php:24
+#: inc/framework/customizer/panel/post.php:31
+#: inc/framework/customizer/panel/page.php:21
+msgid "Sidebar"
+msgstr ""
+
+#: inc/framework/meta-boxes/class-meta-box.php:321
+#: inc/framework/customizer/panel/archive.php:105
+#: inc/framework/customizer/panel/post.php:74
+#: inc/framework/customizer/panel/page.php:41
+msgid "Sidebar Layout"
+msgstr ""
+
+#: inc/framework/customizer/panel/page.php:15
+msgid "Single Page Settings"
+msgstr ""
+
+#: inc/framework/customizer/panel/sections.php:213
+msgid "Single Page: Typography"
+msgstr ""
+
+#: inc/framework/customizer/panel/post.php:16
+msgid "Single Post Settings"
+msgstr ""
+
+#: inc/framework/customizer/panel/sections.php:200
+msgid "Single Post: Typography"
+msgstr ""
+
+#: inc/framework/customizer/panel/typography.php:98
+msgid "Site Tagline"
+msgstr ""
+
+#: inc/framework/customizer/panel/typography.php:76
+msgid "Site Title"
+msgstr ""
+
+#: inc/framework/customizer/panel/header.php:23
+msgid "Site Title & Tagline"
+msgstr ""
+
+#: header.php:28
+msgid "Skip to content"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:252
+msgid "Slide in Box"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:276
+msgid "Smooth Page Scroll"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:361
+msgid "Social Share"
+msgstr ""
+
+#: template-parts/content-none.php:37
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:398
+msgid "Sortable Footer Bar Elements"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:270
+msgid "Sticky Header"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:300
+msgid "Sticky Sidebar"
+msgstr ""
+
+#: inc/framework/customizer/panel/hero.php:95
+msgid "Subtitle"
+msgstr ""
+
+#: inc/framework/customizer/panel/theme-info.php:41
+msgid "Support"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:122
+#: inc/framework/welcome-screen/class-welcome-screen.php:170
+#: inc/framework/welcome-screen/class-welcome-screen.php:174
+#: inc/framework/welcome-screen/class-welcome-screen.php:216
+msgid "Support Forum"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:441
+msgid "Support via Forum"
+msgstr ""
+
+#: inc/helpers/template-functions.php:203
+msgid "Tag"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:164
+msgid ""
+"Theme documentation page will guide you to install and configure theme quick "
+"and easy. We have included details, screenshots and stepwise description "
+"about theme installation guides and tutorials."
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:234
+msgid "Theme Features"
+msgstr ""
+
+#: inc/framework/customizer/panel/theme-info.php:30
+msgid "Theme Info"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:198
+msgid "Theme Option & Customization"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:440
+msgid "Theme Support"
+msgstr ""
+
+#: inc/framework/customizer/panel/theme-info.php:15
+msgid "Themes Info"
+msgstr ""
+
+#: inc/framework/customizer/panel/global.php:26
+msgid ""
+"This sidebar will be reflected in whole site blog, archives, categories, "
+"tags, authors and search result page."
+msgstr ""
+
+#: template-parts/blog/content.php:41
+#: inc/framework/customizer/panel/archive.php:23
+msgid "Thumbnail Placeholder"
+msgstr ""
+
+#: inc/framework/customizer/panel/hero.php:90
+#: inc/framework/customizer/panel/archive.php:53
+msgid "Title"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:246
+msgid "Top Header Bar"
+msgstr ""
+
+#. %1$s: smiley
+#: 404.php:58
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr ""
+
+#: inc/framework/customizer/panel/typography.php:16
+msgid "Typography"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:318
+msgid "Typography Option (850+ Google Fonts)"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:337
+msgid "Unique Page Header"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:312
+msgid "Unique Sidebar Selection"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:306
+msgid "Unlimited Widget Area (Sidebar) Generator"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:487
+#: inc/framework/welcome-screen/class-welcome-screen.php:491
+msgid "Upgrade to Pro"
+msgstr ""
+
+#: inc/framework/customizer/panel/theme-info.php:63
+msgid "View Demos"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:166
+msgid "View Documentation"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:220
+msgid "Visit Support Forum"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:64
+msgid "welcome page"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:57
+msgid "Welcome to Atento"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:103
+msgid "Welcome to Atento version"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:62
+msgid ""
+"Welcome! Thank you for choosing Atento ! To fully take advantage of the best "
+"our theme can offer please make sure you visit our"
+msgstr ""
+
+#: inc/framework/customizer/panel/typography.php:33
+#: inc/framework/customizer/panel/typography.php:297
+msgid "Widget Title"
+msgstr ""
+
+#: inc/framework/customizer/panel/footer.php:23
+msgid "Widgets"
+msgstr ""
+
+#: inc/framework/welcome-screen/class-welcome-screen.php:428
+msgid "WPML Compatible"
+msgstr ""
+
+#: inc/helpers/template-functions.php:211
+msgid "Year"
+msgstr ""
+
+#: inc/helpers/template-functions.php:212
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""

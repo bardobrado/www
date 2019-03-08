@@ -1,0 +1,18 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url('Koch Fraktur_UNZ1A.ttf');
+    font-weight: bold;
+ }
+
+ * {
+    font-family: myFirstFont;
+ }
+
+h1 {
+   font-size: 161px;
+   font-family: myFirstFont;
+   color: #000000;
+   text-align: center;
+   top: 50%;
+   
+}

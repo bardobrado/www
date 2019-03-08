@@ -9,8 +9,9 @@ this.scene;
 this.renderer;
 this.renderer2;
 this.scene2;
+this.element;
 
-var stats, w, h, sphere, sphere1, togglecameraview, isMeshName, intersect, element;
+var stats, w, h, sphere, sphere1, togglecameraview, isMeshName, intersect;
 
 //const gui = new dat.GUI();
 
@@ -59,28 +60,28 @@ function init() {
 
     this.scene2 = new THREE.Scene();
      //HTML
-     element = document.createElement('div');
+     this.element = document.createElement('div');
      //element.innerHTML = string;
-     element.className = 'animated bounceInDown' ; 
-     element.style.background = "#0094ff";
-     element.style.fontSize = "2em";
-     element.style.color = "white";
-     element.style.padding = "2em";
+     this.element.className = 'animated bounceInDown' ; 
+     this.element.style.background = "#0094ff";
+     this.element.style.fontSize = "2em";
+     this.element.style.color = "white";
+     this.element.style.padding = "2em";
 
      //CSS Object
-     div = createCSS3DObject(string2);
-     div.position.x = -200;
-     div.position.y = 130;
-     div.position.z = 0;
-     div.rotation.y = Math.PI/2;
+     this.div = createCSS3DObject(string2);
+     this.div.position.x = -200;
+     this.div.position.y = 130;
+     this.div.position.z = 0;
+     this.div.rotation.y = Math.PI/2;
      
-     scene2.add(div);
+     this.scene2.add(div);
 
      //CSS3D Renderer
-     renderer2 = new THREE.CSS3DRenderer();
-     renderer2.setSize(window.innerWidth, window.innerHeight);
-     renderer2.domElement.style.position = 'absolute';
-     renderer2.domElement.style.top = 0;
+     this.renderer2 = new THREE.CSS3DRenderer();
+     this.renderer2.setSize(window.innerWidth, window.innerHeight);
+     this.renderer2.domElement.style.position = 'absolute';
+     this.renderer2.domElement.style.top = 0;
      
      //document.body.appendChild(renderer2.domElement);
      this.container.appendChild(this.renderer.domElement);
@@ -227,18 +228,18 @@ function init() {
 
     
 
-    this.controls = new THREE.OrbitControls(this.camera, this.renderer.domElement);
-    this.controls.target.set(0, 150, 0);
+    var controls = new THREE.OrbitControls(this.camera, this.renderer.domElement);
+    controls.target.set(0, 150, 0);
     //this.controls.minPolarAngle = Math.PI / 2;
-    this.controls.maxPolarAngle = Math.PI / 2 - 0.22;
-    this.controls.minAzimuthAngle = Math.PI / 2;
+    controls.maxPolarAngle = Math.PI / 2 - 0.22;
+    controls.minAzimuthAngle = Math.PI / 2;
     //this.controls.maxAzimuthAngle = Math.PI / 2;
     //this.controls.mouseButtons.ORBIT = 0;
     //this.controls.mouseButtons.PAN = 0;
     // if (this.controls.maxPolarAngle == Math.PI / 2) {
     //this.controls.enableZoom = false;
     //this.controls.enabled = false;
-    this.controls.update();
+    controls.update();
 
   
     
