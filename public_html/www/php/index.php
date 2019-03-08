@@ -1,13 +1,18 @@
 <?php
 
-$nome = (int) $_GET["a"];
+$nome = $_GET["a"];
 
-//var_dump($nome);
+function teste() {
 
-$ip = $_SERVER["REMOTE_ADDR"];
+    
+    echo $nome;
+}
 
-echo $ip;
+function teste2 () {
 
 
+}
+teste();
+teste2();
 
 ?>
