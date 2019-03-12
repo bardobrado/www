@@ -1,3 +1,0 @@
-Constante de Feigenbaum = 4,669201609
-
-Fazer um plano x em perspectiva
